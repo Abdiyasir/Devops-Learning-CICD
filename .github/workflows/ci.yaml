@@ -28,7 +28,7 @@ jobs:
     - name: run tests
       run:  |
         cd chapter4
-        python -m discover
+        python -m unittest discover
     
     - name: notify us of success
       run: echo "test passed on python ${{ matrix.python-version }}"
