@@ -24,7 +24,7 @@ jobs:
        run: flake8
 
     - name: run unit tests
-      run: pytest
+      run: pytest -q
 
     - name: setup docker build
       uses: docker/setup-buildx-action@v3
