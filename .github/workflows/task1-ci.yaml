@@ -21,7 +21,7 @@ jobs:
          pip install -r task1/requirements.txt
 
     -  name: run linters
-       run: flake8
+       run: flake8 task1
 
     - name: run unit tests
       run: pytest -q
