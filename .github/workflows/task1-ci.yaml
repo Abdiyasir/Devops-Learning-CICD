@@ -12,6 +12,7 @@ jobs:
        with:
          submodules: false
          fetch-depth: 1
+         clean: true
 
 
     -  name: python setup
