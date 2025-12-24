@@ -44,6 +44,6 @@ jobs:
       if: github.ref == 'refs/heads/main'
       uses: docker/build-push-action@v6
       with:
-        context: .
+        context: ./task1
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/hello-app:latest
