@@ -9,6 +9,9 @@ jobs:
     steps:
     -  name: checkout code
        uses: actions/checkout@v4
+       with:
+         submodules: false
+         fetch-depth: 1
 
     -  name: python setup
        uses: actions/setup-python@v5
@@ -40,5 +43,6 @@ jobs:
       if: github.ref == 'refs/heads/main'
       uses: docker/build-push-action@v6
       with:
+        context: .
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/hello-app:latest
