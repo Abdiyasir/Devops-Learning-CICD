@@ -54,7 +54,7 @@ jobs:
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/hello-app:latest
 
     - name: Deploy via SSH
-      uses: appleboy/ssh-action@masterv2.330.0
+      uses: appleboy/ssh-action@v1.2.0  
       with:
         host: ${{ secrets.EC2_HOST }}
         username: ${{ secrets.EC2_USER }}
