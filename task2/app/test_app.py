@@ -29,4 +29,3 @@ def test_count_route_increments_visitor_count(client, monkeypatch):
     assert response.data.decode() == "You are Visitor number: 1"
 
     mock_redis.incr.assert_called_once_with("visitor_count")
-    
