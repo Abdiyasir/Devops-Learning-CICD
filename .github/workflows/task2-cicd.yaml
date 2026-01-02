@@ -51,7 +51,7 @@ jobs:
       with:
         context: ./task2/app
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/hello-app:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/task2-app:latest
 
     - name: Deploy via SSH
       uses: appleboy/ssh-action@v1.2.0  
@@ -60,7 +60,7 @@ jobs:
         username: ec2-user
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          git pull
+          sudo git pull
           cd ~/Devops-Learning-CICD/task2
           sudo docker compose pull 
           sudo docker compose up -d
