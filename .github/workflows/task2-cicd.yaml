@@ -62,6 +62,6 @@ jobs:
         script: |
           cd /home/ec2-user/Devops-Learning-CICD
           git pull
-          cd ~/task2
+          cd ~/Devops-Learning-CICD/task2
           sudo docker compose pull 
           sudo docker compose up -d
