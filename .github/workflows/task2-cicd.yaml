@@ -60,7 +60,8 @@ jobs:
         username: ec2-user
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          sudo git pull
-          cd ~/Devops-Learning-CICD/task2
+          cd /home/ec2-user/Devops-Learning-CICD
+          git pull
+          cd ~/task2
           sudo docker compose pull 
           sudo docker compose up -d
