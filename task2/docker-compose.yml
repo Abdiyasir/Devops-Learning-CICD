@@ -1,6 +1,6 @@
 services:
   web:
-    image: abdiyasir/task2-app:latest
+    build: .
     ports:
       - "5001:5001"
     depends_on:
